@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "Exo-black";
+  src: url("./Exo_2/static/Exo2-Black.ttf");
+}
+@font-face {
+  font-family: "Exo-bold";
+  src: url("./Exo_2/static/Exo2-Bold.ttf");
+}
+@font-face {
+  font-family: "Exo-light";
+  src: url("./Exo_2/static/Exo2-Light.ttf");
+}
+@font-face {
+  font-family: "Exo-medium";
+  src: url("./Exo_2/static/Exo2-Medium.ttf");
+}
+@font-face {
+  font-family: "Exo-extrabold";
+  src: url("./Exo_2/static/Exo2-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Exo-italic";
+  src: url("./Exo_2/static/Exo2-Italic.ttf");
+}
+:root{
+  --main-purple: #71b7e6;
+  --main-grey: #ccc;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #efeae3;
+  font-family: "Exo-black";
+}
+#page1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+#page1 video {
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+  transform: translate(2.5%, 0%);
+}
+nav {
+  position: absolute;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(15px);
+  padding: 1vw 2vw;
+  width: 100%;
+  height: 10vh;
+}
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 7vw;
+}
+nav .nav-items a {
+  color: #fff;
+  text-decoration: none !important;
+}
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100vh;
+}
+.slideshow-container {
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.dot {
+  display: none;
+}
+.active {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 7s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.page1-left h1{
+  position: absolute;
+  text-align: left;
+  z-index: 1;
+  left: 2%;
+  top: 20%;
+  font-size: 10vw;
+  width: 50%;
+  color: #fff;
+  font-family: 'Exo-bold';
+}
+.page1-left h3{
+  position: absolute;
+  text-align: left;
+  z-index: 1;
+  left: 2%;
+  top: 70%;
+  color: #fff;
+  font-family: 'Exo-medium';
+  width: 40%;
+}
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2vw 7vw;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#page2 h1{
+  text-align: center;
+  margin: 4% 0;
+}
+.page2-left p{
+  width: 50%;
+  font-family: 'Exo-light';
+  font-size: 1.4em;
+}
+.page2-right img{
+  border-radius: 30px;
+  height: 50vh;
+  width: 20vw;
+}
+.service img{
+  width: 40px;
+  float: left;
+  margin-right: 10px;
+}
+.service h5{
+  font-family: 'Exo-bold';
+}
+.service p{
+  font-family: 'Exo-light';
+}
+.service p span{
+ padding-left: 50px;
+}
+#page3 {
+  height: 100vh;
+  width: 100%;
+}
+#page4 {
+  height: 100vh;
+  width: 100%;
+  padding: 30px 30px;
+  border-top: 5px dashed #ccc;
+}
+.container {
+  max-width: 600px;
+  width: 90%;
+  height: 80vh;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  font-family: 'Exo-bold';
+  margin-left: calc(100vw - 660px);
+}
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+}
+.container form .user_details {
+  margin: 30px 0 12px 0;
+}
+/* inside the form user details */
+form .user_details .input_box {
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+}
+
+.user_details .input_box .details {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+.user_details .input_box input {
+  height: 45px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user_details .input_box input:focus{
+  border-color: var(--main-purple);
+}
+form .button {
+  height: 45px;
+  margin: 45px 0;
+}
+form .button input {
+  height: 100%;
+  width: 97%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: #71b7e6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px;
+  }
+}
